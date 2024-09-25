@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossSpiritAttack : BspiritState
 {
+    public bool stillHere;
     public BossSpiritAttack(BossSpirit bossSpirit, BspiritStateMachine stateMachine, BossSpiritData bossData, string animBoolName) : base(bossSpirit, stateMachine, bossData, animBoolName)
     {
     }
@@ -11,6 +12,7 @@ public class BossSpiritAttack : BspiritState
     public override void DoChecks()
     {
         base.DoChecks();
+        stillHere = bossSpirit.CheckRange();
     }
 
     public override void Enter()
@@ -26,6 +28,14 @@ public class BossSpiritAttack : BspiritState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+            if (bossSpirit.teleState && !stillHere)
+            {
+                stateMachine.ChangeState(bossSpirit.BossSpiritSkill);
+            }
+            else if (bossSpirit.chaseState && !stillHere)
+            {
+                stateMachine.ChangeState(bossSpirit.BossSpiritIdle);
+            }
     }
 
     public override void PhysicsUpdate()

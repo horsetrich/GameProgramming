@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ public class BossSpirit : MonoBehaviour
     public BossSpiritSecondPhase BossSpiritSecondPhase { get; private set; }
     public BossSpiritSummon BossSpiritSummon { get; private set; }
     public BossSpiritStart BossSpiritStart { get; private set; }
+    public BossStartState BossStartState { get; private set; }
 
     [SerializeField]
     private BossSpiritData bossData;
@@ -32,9 +34,13 @@ public class BossSpirit : MonoBehaviour
     [SerializeField]
     private Transform attackPoint;
     [SerializeField]
-    private GameObject player;
+    public GameObject player;
     [SerializeField]
     private GameObject summonSpirit;
+    [SerializeField]
+    private GameObject summonSpiritTwo;
+    [SerializeField]
+    private GameObject summonSpiritThree;
     [SerializeField]
     private Transform summonPointOne;
     [SerializeField]
@@ -42,15 +48,19 @@ public class BossSpirit : MonoBehaviour
     [SerializeField]
     private Transform summonPointThree;
 
-    [SerializeField]
-    private Transform teleportOne;
-    [SerializeField]
-    private Transform teleportTwo;
-    [SerializeField]
-    private Transform teleportThree;
+    public Transform teleportOne;
+    public Transform teleportTwo;
+    public Transform teleportThree;
 
     public int FacingDirection { get; private set; }
+    public bool isFlipped;
+    private float distance;
     public float counter = 0;
+    public bool teleState = false;
+    public bool chaseState = false;
+    public bool telePlay = false;
+    public bool stop = false;
+    public int teleport = 0;
     public Vector3 scale = new Vector3(1f, 1f, 1f);
 
     private void Awake()
@@ -64,7 +74,8 @@ public class BossSpirit : MonoBehaviour
         BossSpiritSecondPhase = new BossSpiritSecondPhase(this, StateMachine, bossData, "secondPhase");
         BossSpiritSkill = new BossSpiritSkill(this, StateMachine, bossData, "bossSkill");
         BossSpiritSummon = new BossSpiritSummon(this, StateMachine, bossData, "bossSummon");
-        BossSpiritStart = new BossSpiritStart(this, StateMachine, bossData, "start");
+        BossSpiritStart = new BossSpiritStart(this, StateMachine, bossData, "takeShape");
+        BossStartState = new BossStartState(this, StateMachine, bossData, "start");
 
     }
 
@@ -77,7 +88,7 @@ public class BossSpirit : MonoBehaviour
 
         FacingDirection = 1;
 
-        StateMachine.Initialize(BossSpiritStart);
+        StateMachine.Initialize(BossStartState);
 
     }
 
@@ -85,6 +96,7 @@ public class BossSpirit : MonoBehaviour
     {
         CurrentVelocity = rb.velocity;
         StateMachine.CurrentState.LogicUpdate();
+        counter += Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -127,11 +139,20 @@ public class BossSpirit : MonoBehaviour
     }
     private void OnDrawGizmosSelected() => Gizmos.DrawWireSphere(attackPoint.position, bossData.attackRange);
 
-    public void CheckIfShouldFlip(int xInput)
+    public void CheckIfShouldFlip()
     {
-        if (xInput != 0 && xInput != FacingDirection)
+        Vector3 flipped = transform.localScale;
+        flipped.z *= -1f;
+
+        if (transform.position.x < player.transform.position.x && isFlipped)
         {
             Flip();
+            isFlipped = false;
+        }
+        else if (transform.position.x > player.transform.position.x && !isFlipped)
+        {
+            Flip();
+            isFlipped = true;
         }
     }
 
@@ -144,8 +165,8 @@ public class BossSpirit : MonoBehaviour
     public void SummonEnemy()
     {
         Instantiate(summonSpirit, summonPointOne, true);
-        Instantiate(summonSpirit, summonPointTwo, true);
-        Instantiate(summonSpirit, summonPointThree, true);
+        Instantiate(summonSpiritTwo, summonPointTwo, true);
+        Instantiate(summonSpiritThree, summonPointThree, true);
     }
 
     public IEnumerator ScaleOverTime(float duration, float scale)
@@ -164,14 +185,21 @@ public class BossSpirit : MonoBehaviour
 
         transform.localScale = endScale;
     }
+    public void GetPlayer()
+    {
+        Vector2 spiritPos = transform.position;
+        distance = Vector2.Distance(transform.position, player.transform.position);
 
-    public void TeleportOne() => gameObject.transform.position = teleportOne.position;
+        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, bossData.speed * Time.deltaTime);
+    }
 
-    public void TeleportTwo() => gameObject.transform.position = teleportTwo.position;
+    public void TeleportOne() => transform.position = teleportOne.transform.position;
 
-    public void TeleportThree() => gameObject.transform.position = teleportThree.position;
+    public void TeleportTwo() => transform.position = teleportTwo.transform.position;
 
-    public void TeleportPlayer() => gameObject.transform.position = player.transform.position;
+    public void TeleportThree() => transform.position = teleportThree.transform.position;
+
+    public void TeleportPlayer() => transform.position = player.transform.position;
 
 
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();

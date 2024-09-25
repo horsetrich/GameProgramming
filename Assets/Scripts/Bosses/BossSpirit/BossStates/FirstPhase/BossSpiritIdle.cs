@@ -14,26 +14,29 @@ public class BossSpiritIdle : BspiritState
     {
         base.DoChecks();
         canAttack = bossSpirit.CheckRange();
+        bossSpirit.CheckIfShouldFlip();
     }
 
     public override void Enter()
     {
         base.Enter();
-        bossSpirit.counter += Time.deltaTime;
+        bossSpirit.chaseState = true;
+        bossSpirit.teleState = false;
     }
 
     public override void Exit()
     {
         base.Exit();
-        bossSpirit.counter = 0;
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        bossSpirit.GetPlayer();
         if(bossSpirit.counter > 10)
         {
             stateMachine.ChangeState(bossSpirit.BossSpiritSummon);
+            bossSpirit.counter = 0;
         }
         else if (canAttack)
         {

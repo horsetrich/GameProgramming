@@ -18,11 +18,14 @@ public class BossSpiritSummon : BspiritState
     {
         base.Enter();
         bossSpirit.SummonEnemy();
+        bossSpirit.chaseState = false;
+        bossSpirit.counter = 0;
     }
 
     public override void Exit()
     {
         base.Exit();
+        bossSpirit.counter = 0;
     }
 
     public override void LogicUpdate()

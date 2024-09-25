@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class BossSpiritStart : BspiritState
+public class BossStartState : BspiritState
 {
-    private bool startFight;
-
-    public BossSpiritStart(BossSpirit bossSpirit, BspiritStateMachine stateMachine, BossSpiritData bossData, string animBoolName) : base(bossSpirit, stateMachine, bossData, animBoolName)
+    private bool begin;
+    public BossStartState(BossSpirit bossSpirit, BspiritStateMachine stateMachine, BossSpiritData bossData, string animBoolName) : base(bossSpirit, stateMachine, bossData, animBoolName)
     {
     }
 
     public override void DoChecks()
     {
         base.DoChecks();
-        startFight = bossSpirit.BeginFight();
+        begin = bossSpirit.BeginFight();
     }
 
     public override void Enter()
@@ -24,15 +24,14 @@ public class BossSpiritStart : BspiritState
     public override void Exit()
     {
         base.Exit();
-        bossSpirit.counter = 0;
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        if (isAnimationFinished)
+        if (begin)
         {
-            stateMachine.ChangeState(bossSpirit.BossSpiritIdle);
+            stateMachine.ChangeState(bossSpirit.BossSpiritStart);
         }
     }
 
