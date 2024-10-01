@@ -61,12 +61,16 @@ public class BossSpiritSkill : BspiritState
             bossSpirit.telePlay = false;
             bossSpirit.teleState = false;
         }
-        else if (gotYou)
+        else if (gotYou && bossSpirit.secondPhase == false)
         {
             stateMachine.ChangeState(bossSpirit.BossSpiritAttack);
             bossSpirit.teleState = false;
             bossSpirit.chaseState = true;
             bossSpirit.counter = 0;
+        }
+        else if (bossSpirit.secondPhase && bossSpirit.secondPhase == false)
+        {
+            stateMachine.ChangeState(bossSpirit.BossSpiritDead);
         }
     }
 

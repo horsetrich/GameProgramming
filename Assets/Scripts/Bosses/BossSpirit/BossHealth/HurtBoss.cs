@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class HurtBoss : MonoBehaviour
 {
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private int damage = 1;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Boss"))
         {
-            Debug.Log("got you");
+            collision.gameObject.GetComponent<BossHealth>().GetHurt(damage);
         }
     }
 }

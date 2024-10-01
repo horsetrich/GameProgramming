@@ -61,6 +61,7 @@ public class BossSpirit : MonoBehaviour
     public bool telePlay = false;
     public bool stop = false;
     public int teleport = 0;
+    public bool secondPhase = false;
     public Vector3 scale = new Vector3(1f, 1f, 1f);
 
     private void Awake()
@@ -70,7 +71,7 @@ public class BossSpirit : MonoBehaviour
         BossSpiritIdle = new BossSpiritIdle(this, StateMachine, bossData, "bossIdle");
         BossSpiritAppear = new BossSpiritAppear(this, StateMachine, bossData, "bossAppear");
         BossSpiritAttack = new BossSpiritAttack(this, StateMachine, bossData, "bossAttack");
-        BossSpiritDead = new BossSpiritDead(this, StateMachine, bossData, "bossDead");
+        BossSpiritDead = new BossSpiritDead(this, StateMachine, bossData, "death");
         BossSpiritSecondPhase = new BossSpiritSecondPhase(this, StateMachine, bossData, "secondPhase");
         BossSpiritSkill = new BossSpiritSkill(this, StateMachine, bossData, "bossSkill");
         BossSpiritSummon = new BossSpiritSummon(this, StateMachine, bossData, "bossSummon");
@@ -193,6 +194,8 @@ public class BossSpirit : MonoBehaviour
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, bossData.speed * Time.deltaTime);
     }
 
+    public void SecondPhase() => secondPhase = true;
+    public void DoneSecondPhase() => secondPhase = false;
     public void TeleportOne() => transform.position = teleportOne.transform.position;
 
     public void TeleportTwo() => transform.position = teleportTwo.transform.position;

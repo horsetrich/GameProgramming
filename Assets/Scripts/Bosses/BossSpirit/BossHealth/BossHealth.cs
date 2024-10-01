@@ -47,8 +47,9 @@ public class BossHealth : MonoBehaviour
 
         if (enemyHealth <= 0)
         {
-
+            gameObject.GetComponent<BossSpirit>().SecondPhase();
             rb.velocity = Vector2.zero;
+
         }
     }
 }

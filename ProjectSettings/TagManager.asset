@@ -9,6 +9,7 @@ TagManager:
   - Spirit
   - Goblin
   - Skeleton
+  - Boss
   layers:
   - Default
   - TransparentFX

@@ -42,6 +42,10 @@ public class BossSpiritIdle : BspiritState
         {
             stateMachine.ChangeState(bossSpirit.BossSpiritAttack);
         }
+        else if (bossSpirit.secondPhase && bossSpirit.secondPhase == false)
+        {
+            stateMachine.ChangeState(bossSpirit.BossSpiritDead);
+        }
     }
 
     public override void PhysicsUpdate()

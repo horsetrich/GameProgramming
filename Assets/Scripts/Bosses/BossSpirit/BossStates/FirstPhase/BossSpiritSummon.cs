@@ -31,9 +31,13 @@ public class BossSpiritSummon : BspiritState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        if (isAnimationFinished)
+        if (isAnimationFinished && bossSpirit.secondPhase == false)
         {
             stateMachine.ChangeState(bossSpirit.BossSpiritSkill);
+        }
+        else if (bossSpirit.secondPhase && bossSpirit.secondPhase == false)
+        {
+            stateMachine.ChangeState(bossSpirit.BossSpiritDead);
         }
     }
 

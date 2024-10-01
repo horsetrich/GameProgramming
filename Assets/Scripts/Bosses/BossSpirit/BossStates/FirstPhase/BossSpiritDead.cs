@@ -26,6 +26,10 @@ public class BossSpiritDead : BspiritState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        if (bossSpirit.secondPhase && isAnimationFinished)
+        {
+            stateMachine.ChangeState(bossSpirit.BossSpiritSecondPhase);
+        }
     }
 
     public override void PhysicsUpdate()
