@@ -151,6 +151,15 @@ public class Player : MonoBehaviour
             enemy.GetComponent<EnemyHealth>().GetHurt(playerData.playerDamage);
         }
     }
+    public void HitSwitch()
+    {
+        Collider2D[] switchHit = Physics2D.OverlapCircleAll(attackPoint.position, playerData.attackRange, playerData.enemyLayers);
+
+        foreach (Collider2D hit in switchHit)
+        {
+            hit.GetComponent<EnemyHealth>().GetHurt(playerData.playerDamage);
+        }
+    }
     private void OnDrawGizmosSelected() => Gizmos.DrawWireSphere(attackPoint.position, playerData.attackRange);
 
     #endregion
