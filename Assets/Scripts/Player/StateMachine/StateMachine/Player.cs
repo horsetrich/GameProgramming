@@ -16,15 +16,13 @@ public class Player : MonoBehaviour
     public PlayerCrouchIdleState CrouchIdleState { get; private set; }
     public PlayerCrouchMoveState CrouchMoveState { get; private set ; }
     public PlayerDefendState DefendState { get; private set; }
-    public AttackState1 attackState1 { get; private set; }
-    public AttackState2 attackState2 { get; private set; }
-    public AttackState3 attackState3 { get; private set; }
+    public AttackState1 AttackState1 { get; private set; }
+    public AttackState2 AttackState2 { get; private set; }
+    public AttackState3 AttackState3 { get; private set; }
 
     [SerializeField]
     private PlayerData playerData;
 
-    [SerializeField]
-    private EnemyHealth enemyHealth;
     #endregion
 
     #region Components
@@ -69,11 +67,10 @@ public class Player : MonoBehaviour
         CrouchIdleState = new PlayerCrouchIdleState(this, StateMachine, playerData, "crouchIdle");
         CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, playerData, "crouchMove");
         DefendState = new PlayerDefendState(this, StateMachine, playerData, "defendPlayer");
-        attackState1 = new AttackState1(this, StateMachine, playerData, "attack1");
-        attackState2 = new AttackState2(this, StateMachine, playerData, "attack2");
-        attackState3 = new AttackState3(this, StateMachine, playerData, "attack3");
+        AttackState1 = new AttackState1(this, StateMachine, playerData, "attack1");
+        AttackState2 = new AttackState2(this, StateMachine, playerData, "attack2");
+        AttackState3 = new AttackState3(this, StateMachine, playerData, "attack3");
 
-        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     private void Start()
@@ -157,7 +154,7 @@ public class Player : MonoBehaviour
 
         foreach (Collider2D hit in switchHit)
         {
-            hit.GetComponent<EnemyHealth>().GetHurt(playerData.playerDamage);
+            hit.GetComponent<Lever>().TurnOn();
         }
     }
     private void OnDrawGizmosSelected() => Gizmos.DrawWireSphere(attackPoint.position, playerData.attackRange);

@@ -49,7 +49,7 @@ public class PlayerMoveState : PlayerGroundedState
             else if (Attack)
             {
                 player.InputHandler.UseAttackInput();
-                stateMachine.ChangeState(player.attackState1);
+                stateMachine.ChangeState(player.AttackState1);
             }
         }
         

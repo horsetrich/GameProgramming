@@ -38,7 +38,7 @@ public class AttackState1 : SuperAttackState
             if (attackInput)
             {
                 player.InputHandler.UseAttackInput();
-                stateMachine.ChangeState(player.attackState2);
+                stateMachine.ChangeState(player.AttackState2);
             }
             else if (isAnimationFinished)
             {
