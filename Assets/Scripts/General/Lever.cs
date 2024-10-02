@@ -27,29 +27,27 @@ public class Lever : MonoBehaviour
     {
         counter += Time.deltaTime;
         FlipSwitch();
-        TurnOff();
+        if (turnedOn)
+        {
+            TurnOff();
+        }
     }
 
     public void FlipSwitch()
     {
         if (turnedOn)
         {
-            counter = 0;
             animator.SetBool("On", true);
-            MakeLight();
-            animator.SetBool("Off", false);
 
         }
         else if (!turnedOn)
         {
             animator.SetBool("On", false);
-            animator.SetBool("Off", true);
         }
     }
     public void MakeLight()
     {
-        Instantiate(lightSource, source, true);
-        Destroy(lightSource, 5f);
+        Instantiate(lightSource, source);
     }
 
     public void TurnOff()

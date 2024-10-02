@@ -62,4 +62,5 @@ public class PlayerData : ScriptableObject
     public float nextAttackTime = 0f;
     public int numberOfAttacks = 0;
     public LayerMask enemyLayers;
+    public LayerMask switchLayers;
 }

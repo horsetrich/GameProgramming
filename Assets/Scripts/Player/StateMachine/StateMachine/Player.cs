@@ -150,7 +150,7 @@ public class Player : MonoBehaviour
     }
     public void HitSwitch()
     {
-        Collider2D[] switchHit = Physics2D.OverlapCircleAll(attackPoint.position, playerData.attackRange, playerData.enemyLayers);
+        Collider2D[] switchHit = Physics2D.OverlapCircleAll(attackPoint.position, playerData.attackRange, playerData.switchLayers);
 
         foreach (Collider2D hit in switchHit)
         {

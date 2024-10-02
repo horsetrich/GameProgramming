@@ -46,3 +46,6 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
+  switchLayers:
+    serializedVersion: 2
+    m_Bits: 512
