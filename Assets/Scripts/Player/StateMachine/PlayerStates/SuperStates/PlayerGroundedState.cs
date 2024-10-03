@@ -14,6 +14,7 @@ public class PlayerGroundedState : PlayerState
     private bool isGrounded;
     protected bool Defended;
     protected bool Attack;
+    private bool dashInput;
     public PlayerGroundedState(Player player, PlayerStateMachine stateMachine, PlayerData playerdata, string animBoolName) : base(player, stateMachine, playerdata, animBoolName)
     {
     }
@@ -34,6 +35,7 @@ public class PlayerGroundedState : PlayerState
         player.JumpState.ResetAmountOfJumpsLeft();
         playerData.numberOfAttacks = 0;
         player.CantAttack();
+        player.DashState.ResetCanDash();
     }
 
     public override void Exit()
@@ -50,6 +52,7 @@ public class PlayerGroundedState : PlayerState
         Defended = player.InputHandler.DefendInput;
         JumpInput = player.InputHandler.JumpInput;
         Attack = player.InputHandler.AttackInput;
+        dashInput = player.InputHandler.DashInput;
 
         if (JumpInput && player.JumpState.CanJump())
         {

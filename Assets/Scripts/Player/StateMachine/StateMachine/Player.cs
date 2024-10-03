@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     public AttackState2 AttackState2 { get; private set; }
     public AttackState3 AttackState3 { get; private set; }
 
+    public PlayerDashState DashState    {get; private set;}
+
     [SerializeField]
     private PlayerData playerData;
 
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D rb { get; private set; }
+    public Transform DashDirectionIndicator {get; private set;}
     public BoxCollider2D MovementCollider { get; private set; }
     #endregion
 
@@ -70,7 +73,7 @@ public class Player : MonoBehaviour
         AttackState1 = new AttackState1(this, StateMachine, playerData, "attack1");
         AttackState2 = new AttackState2(this, StateMachine, playerData, "attack2");
         AttackState3 = new AttackState3(this, StateMachine, playerData, "attack3");
-
+        DashState = new PlayerDashState(this,StateMachine,playerData, "inAir");
     }
 
     private void Start()
@@ -78,6 +81,7 @@ public class Player : MonoBehaviour
         Anim = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         rb = GetComponent<Rigidbody2D>();
+        DashDirectionIndicator = transform.Find("DashDirectionIndicator");
         MovementCollider = GetComponent<BoxCollider2D>();
 
         FacingDirection = 1;
@@ -111,6 +115,13 @@ public class Player : MonoBehaviour
     {
         angle.Normalize();
         workspace.Set(angle.x * velocity * direction, angle.y * velocity);
+        rb.velocity = workspace;
+        CurrentVelocity = workspace;
+    }
+
+    public void SetVelocity(float velocity,Vector2 direction)
+    {
+        workspace = direction * velocity;
         rb.velocity = workspace;
         CurrentVelocity = workspace;
     }
