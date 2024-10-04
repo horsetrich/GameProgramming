@@ -43,9 +43,6 @@ public class PlayerHealth : MonoBehaviour
 
 
 
-
-
-
     // Start is called before the first frame update
     void Start()
 
@@ -177,18 +174,21 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    public void AddHealth(float _value)
+    public void AddHealth(float _value) //takes health data and increases health
     {
-        
         health = Mathf.Clamp(health + _value, 0, playerData.maxHealth);
     }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.tag == "Health")
         {
+            //sends health from the health data from the heart to the AddHealth method
+            AddHealth(collision.gameObject.GetComponent<Heart>().healthInc); 
 
-            collision.GetComponent<PlayerHealth>().AddHealth(healthValue);
-            gameObject.SetActive(false);
+            //deletes the heart game object
+            collision.gameObject.SetActive(false);
         }
     }
 
