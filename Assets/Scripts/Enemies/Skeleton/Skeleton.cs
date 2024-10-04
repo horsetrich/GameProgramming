@@ -49,6 +49,8 @@ public class Skeleton : MonoBehaviour
     public int FacingDirection { get; private set; }
     public bool isDead;
 
+    public int direction;
+
 
     private Vector2 workspace;
     #endregion
@@ -109,7 +111,16 @@ public class Skeleton : MonoBehaviour
 
     public void SetVelocityX(float velocity)
     {
-        workspace.Set(velocity * (player.transform.position.x - transform.position.x), CurrentVelocity.y);
+        direction = (int)(player.transform.position.x - transform.position.x);
+        if(direction > 0)
+        {
+            workspace.Set(velocity * 1, CurrentVelocity.y);
+        }
+        if(direction < 0)
+        {
+            workspace.Set(velocity * -1, CurrentVelocity.y);
+        }
+        // workspace.Set(velocity * (player.transform.position.x - transform.position.x), CurrentVelocity.y);
         rb.velocity = workspace;
         CurrentVelocity = workspace;
     }
