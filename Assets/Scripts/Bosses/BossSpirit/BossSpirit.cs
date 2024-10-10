@@ -19,6 +19,8 @@ public class BossSpirit : MonoBehaviour
     public BossSpiritSummon BossSpiritSummon { get; private set; }
     public BossSpiritStart BossSpiritStart { get; private set; }
     public BossStartState BossStartState { get; private set; }
+    public BossSpiritFloor BossSpiritFloor { get; private set; }
+    public BossSecondSummon BossSecondSummon { get; private set; }
 
     [SerializeField]
     private BossSpiritData bossData;
@@ -77,7 +79,8 @@ public class BossSpirit : MonoBehaviour
         BossSpiritSummon = new BossSpiritSummon(this, StateMachine, bossData, "bossSummon");
         BossSpiritStart = new BossSpiritStart(this, StateMachine, bossData, "takeShape");
         BossStartState = new BossStartState(this, StateMachine, bossData, "start");
-
+        BossSpiritFloor = new BossSpiritFloor(this, StateMachine, bossData, "bossSkill");
+        BossSecondSummon = new BossSecondSummon(this, StateMachine, bossData, "bossSummon");
     }
 
     private void Start()

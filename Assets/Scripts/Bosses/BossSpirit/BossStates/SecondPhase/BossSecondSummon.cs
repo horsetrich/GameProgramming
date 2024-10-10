@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossSpiritFloor : BspiritState
+public class BossSecondSummon : BspiritState
 {
-    public BossSpiritFloor(BossSpirit bossSpirit, BspiritStateMachine stateMachine, BossSpiritData bossData, string animBoolName) : base(bossSpirit, stateMachine, bossData, animBoolName)
+    public BossSecondSummon(BossSpirit bossSpirit, BspiritStateMachine stateMachine, BossSpiritData bossData, string animBoolName) : base(bossSpirit, stateMachine, bossData, animBoolName)
     {
     }
 
@@ -16,16 +16,22 @@ public class BossSpiritFloor : BspiritState
     public override void Enter()
     {
         base.Enter();
+        bossSpirit.SummonEnemy();
+        bossSpirit.counter = 0;
     }
 
     public override void Exit()
     {
         base.Exit();
+        bossSpirit.counter = 0;
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        if (isAnimationFinished)
+        {
+        }
     }
 
     public override void PhysicsUpdate()
