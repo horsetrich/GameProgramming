@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour
 {
@@ -10,15 +11,15 @@ public class BossHealth : MonoBehaviour
     public string animBool;
     public string secondBool;
     public bool canKill;
-    public int enemyHealth = 0;
+    public int enemyHealth = 3;
     private Animator animator;
     private Rigidbody2D rb;
 
-    [SerializeField] FloatingHealthBar healthBar;
+    [SerializeField] Slider healthBar;
 
     private void Awake()
     {
-        healthBar = GetComponentInChildren<FloatingHealthBar>();
+        
     }
 
     // Start is called before the first frame update
@@ -33,7 +34,7 @@ public class BossHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthBar.UpdateHealthBar(enemyHealth);
+        healthBar.value = enemyHealth;
     }
 
     public void CanKill() => canKill = true;

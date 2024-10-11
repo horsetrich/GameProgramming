@@ -12,10 +12,17 @@ public class FloatingHealthBar : MonoBehaviour
     {
         slider.value = currentValue;
     }
+    public void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+
+
 }

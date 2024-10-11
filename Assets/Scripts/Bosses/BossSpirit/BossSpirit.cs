@@ -4,6 +4,7 @@ using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossSpirit : MonoBehaviour
 {
@@ -24,7 +25,6 @@ public class BossSpirit : MonoBehaviour
 
     [SerializeField]
     private BossSpiritData bossData;
-
 
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
@@ -89,7 +89,6 @@ public class BossSpirit : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
         rb = GetComponent<Rigidbody2D>();
         BossCollider = GetComponent<BoxCollider2D>();
-
         FacingDirection = 1;
 
         StateMachine.Initialize(BossStartState);
@@ -206,7 +205,6 @@ public class BossSpirit : MonoBehaviour
     public void TeleportThree() => transform.position = teleportThree.transform.position;
 
     public void TeleportPlayer() => transform.position = player.transform.position;
-
 
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
     private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
