@@ -26,6 +26,10 @@ public class BossSpiritFloor : BspiritState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        if (isAnimationFinished)
+        {
+            stateMachine.ChangeState(bossSpirit.BossSpiritHurt);
+        }
     }
 
     public override void PhysicsUpdate()

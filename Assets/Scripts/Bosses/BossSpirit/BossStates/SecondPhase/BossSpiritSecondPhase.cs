@@ -29,7 +29,7 @@ public class BossSpiritSecondPhase : BspiritState
         bossSpirit.StartCoroutine(bossSpirit.ScaleOverTime(5f, 32f));
         if(isAnimationFinished)
         {
-            stateMachine.ChangeState(bossSpirit.BossSpiritSummon);
+            stateMachine.ChangeState(bossSpirit.BossSecondSummon);
         }
         
     }

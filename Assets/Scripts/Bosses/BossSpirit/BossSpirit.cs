@@ -22,6 +22,7 @@ public class BossSpirit : MonoBehaviour
     public BossStartState BossStartState { get; private set; }
     public BossSpiritFloor BossSpiritFloor { get; private set; }
     public BossSecondSummon BossSecondSummon { get; private set; }
+    public BossSpiritHurt BossSpiritHurt { get; private set; }
 
     [SerializeField]
     private BossSpiritData bossData;
@@ -33,6 +34,8 @@ public class BossSpirit : MonoBehaviour
 
     public Vector2 CurrentVelocity { get; private set; }
     private Vector2 workspace;
+    [SerializeField]
+    private GameObject hurtPoint;
     [SerializeField]
     private Transform attackPoint;
     [SerializeField]
@@ -81,6 +84,7 @@ public class BossSpirit : MonoBehaviour
         BossStartState = new BossStartState(this, StateMachine, bossData, "start");
         BossSpiritFloor = new BossSpiritFloor(this, StateMachine, bossData, "bossSkill");
         BossSecondSummon = new BossSecondSummon(this, StateMachine, bossData, "bossSummon");
+        BossSpiritHurt = new BossSpiritHurt(this, StateMachine, bossData, "bossSkill");
     }
 
     private void Start()
@@ -205,6 +209,9 @@ public class BossSpirit : MonoBehaviour
     public void TeleportThree() => transform.position = teleportThree.transform.position;
 
     public void TeleportPlayer() => transform.position = player.transform.position;
+
+    public void TurnOnHeart() => hurtPoint.SetActive(true);
+    public void TurnOffHeart() => hurtPoint.SetActive(false);
 
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
     private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
