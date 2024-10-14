@@ -73,4 +73,5 @@ public class PlayerData : ScriptableObject
     public int numberOfAttacks = 0;
     public LayerMask enemyLayers;
     public LayerMask switchLayers;
+    public LayerMask bossLayers;
 }

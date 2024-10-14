@@ -16,11 +16,13 @@ public class BossSpiritHurt : BspiritState
     public override void Enter()
     {
         base.Enter();
+        bossSpirit.TurnOnHeart();
     }
 
     public override void Exit()
     {
         base.Exit();
+        bossSpirit.TurnOffHeart();
     }
 
     public override void LogicUpdate()

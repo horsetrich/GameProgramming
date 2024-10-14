@@ -12,6 +12,7 @@ public class BossHealth : MonoBehaviour
     public string secondBool;
     public bool canKill;
     public int enemyHealth = 3;
+    private bool secondPhase = false;
     private Animator animator;
     private Rigidbody2D rb;
 
@@ -50,6 +51,11 @@ public class BossHealth : MonoBehaviour
         {
             gameObject.GetComponent<BossSpirit>().SecondPhase();
             rb.velocity = Vector2.zero;
+            if (!secondPhase)
+            {
+                enemyHealth = maxEnemyHealth;
+            }
+            secondPhase = true;
 
         }
     }

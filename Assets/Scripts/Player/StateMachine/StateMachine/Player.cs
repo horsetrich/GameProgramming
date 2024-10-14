@@ -159,6 +159,15 @@ public class Player : MonoBehaviour
             enemy.GetComponent<EnemyHealth>().GetHurt(playerData.playerDamage);
         }
     }
+    public void AttackBoss()
+    {
+        Collider2D[] hitBoss = Physics2D.OverlapCircleAll(attackPoint.position, playerData.attackRange, playerData.bossLayers);
+
+        foreach (Collider2D boss in hitBoss)
+        {
+            boss.GetComponent<InBetween>().PassAlong(playerData.playerDamage);
+        }
+    }
     public void HitSwitch()
     {
         Collider2D[] switchHit = Physics2D.OverlapCircleAll(attackPoint.position, playerData.attackRange, playerData.switchLayers);
