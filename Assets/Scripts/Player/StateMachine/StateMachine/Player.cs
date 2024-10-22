@@ -93,6 +93,10 @@ public class Player : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
         CurrentVelocity = rb.velocity;
         StateMachine.CurrentState.LogicUpdate();
     }

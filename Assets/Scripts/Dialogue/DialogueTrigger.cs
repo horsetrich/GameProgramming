@@ -20,9 +20,13 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (playerInRange)
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             visualCue.SetActive(true);
+            if (InputManager.GetInstance().GetInteractPressed())
+            {
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+            }
         }
         else
         {
@@ -40,7 +44,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Plauyer")
+        if (collision.gameObject.tag == "Player")
         {
             playerInRange = false;
         }
