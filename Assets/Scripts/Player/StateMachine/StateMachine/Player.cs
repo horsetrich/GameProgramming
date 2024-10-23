@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Player : MonoBehaviour, IDataPersistence
+public class Player : MonoBehaviour
 {
     #region State Variables
     public PlayerStateMachine StateMachine {  get; private set; }
@@ -93,10 +93,6 @@ public class Player : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
-        {
-            return;
-        }
         CurrentVelocity = rb.velocity;
         StateMachine.CurrentState.LogicUpdate();
     }
@@ -169,7 +165,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
         foreach (Collider2D boss in hitBoss)
         {
-            boss.GetComponent<InBetween>().PassAlong(1);
+            boss.GetComponent<InBetween>().PassAlong(playerData.playerDamage);
         }
     }
     public void HitSwitch()
@@ -259,14 +255,5 @@ public class Player : MonoBehaviour, IDataPersistence
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
     #endregion
-
-    public void LoadData(GameData data)
-    {
-        this.transform.position = data.playerPosition;
-    }
-    public void SaveData(GameData data)
-    {
-        data.playerPosition = this.transform.position;
-    }
 }
 

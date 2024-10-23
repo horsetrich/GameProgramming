@@ -17,14 +17,12 @@ public class BossSpiritHurt : BspiritState
     {
         base.Enter();
         bossSpirit.TurnOnHeart();
-        bossSpirit.counter = 0;
     }
 
     public override void Exit()
     {
         base.Exit();
         bossSpirit.TurnOffHeart();
-        bossSpirit.counter = 0;
     }
 
     public override void LogicUpdate()
