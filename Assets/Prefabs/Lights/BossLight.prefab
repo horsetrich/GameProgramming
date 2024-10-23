@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4346952929730534699}
   - component: {fileID: 8757101442709186656}
   m_Layer: 0
-  m_Name: LightObject
+  m_Name: BossLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
