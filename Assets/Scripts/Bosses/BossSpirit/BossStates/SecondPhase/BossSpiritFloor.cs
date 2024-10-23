@@ -16,17 +16,19 @@ public class BossSpiritFloor : BspiritState
     public override void Enter()
     {
         base.Enter();
+        bossSpirit.counter = 0;
     }
 
     public override void Exit()
     {
         base.Exit();
+        bossSpirit.counter = 0;
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        if (isAnimationFinished)
+        if (bossSpirit.counter > 6)
         {
             stateMachine.ChangeState(bossSpirit.BossSpiritHurt);
         }

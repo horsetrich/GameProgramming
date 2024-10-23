@@ -57,3 +57,6 @@ MonoBehaviour:
   switchLayers:
     serializedVersion: 2
     m_Bits: 512
+  bossLayers:
+    serializedVersion: 2
+    m_Bits: 2048
