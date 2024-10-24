@@ -14,6 +14,8 @@ public class EnemyHealth : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
+    public GameObject coin;
+
     [SerializeField] FloatingHealthBar healthBar;
 
     private void Awake()
@@ -58,6 +60,9 @@ public class EnemyHealth : MonoBehaviour
             
             if (this.gameObject == gameObject.CompareTag("Goblin"))
             {
+                GameObject coinObj = Instantiate(coin, 
+                gameObject.transform.position, gameObject.transform.rotation);
+
                 animator.SetBool(animBool, true);
                 Destroy(gameObject, 0.5f);
             }
@@ -66,6 +71,9 @@ public class EnemyHealth : MonoBehaviour
                 gameObject.GetComponent<Skeleton>().SkeletonDead();
                 if (canKill)
                 {
+                    GameObject coinObj = Instantiate(coin, 
+                gameObject.transform.position, gameObject.transform.rotation);
+
                     Destroy(gameObject);
                 }
             }
