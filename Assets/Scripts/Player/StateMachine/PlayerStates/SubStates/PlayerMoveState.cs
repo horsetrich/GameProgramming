@@ -29,7 +29,7 @@ public class PlayerMoveState : PlayerGroundedState
 
         player.CheckIfShouldFlip(xInput);
 
-        player.SetVelocityX(playerData.movementVelocity * xInput);
+        player.SetVelocityX(GameManager.GetInstance().playerSpeed * xInput);
 
         if (!isExitingState)
         {

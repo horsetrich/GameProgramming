@@ -93,7 +93,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || ShopManager.GetInstance().shopping)
         {
             return;
         }
@@ -160,7 +160,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<EnemyHealth>().GetHurt(playerData.playerDamage);
+            enemy.GetComponent<EnemyHealth>().GetHurt(GameManager.GetInstance().playerDamage);
         }
     }
     public void AttackBoss()

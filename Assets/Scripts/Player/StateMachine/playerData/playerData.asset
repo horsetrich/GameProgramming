@@ -46,7 +46,7 @@ MonoBehaviour:
   defendCooldown: 4
   timesDefended: 1
   maxHealth: 8
-  playerDamage: 5
+  playerDamage: 1
   attackRange: 1
   attackRate: 2
   nextAttackTime: 1

@@ -8,11 +8,11 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     [Header("Move State")]
-    public float movementVelocity = 10f;
+    public float movementVelocity = GameManager.GetInstance().playerSpeed;
 
     [Header("Jump State")]
     public float jumpVelocity = 15f;
-    public int amountOfJumps = 1;
+    public int amountOfJumps = GameManager.GetInstance().amountOfJumps;
 
     [Header("Wall Jump State")]
     public float wallJumpVelocity = 20f;
@@ -66,7 +66,7 @@ public class PlayerData : ScriptableObject
     public int maxHealth = 8;
 
     [Header("Player Attack")]
-    public int playerDamage = 5;
+    public int playerDamage = GameManager.GetInstance().playerDamage;
     public float attackRange = 0.5f;
     public float attackRate = 2f;
     public float nextAttackTime = 0f;
