@@ -65,11 +65,11 @@ public class ShopManager : MonoBehaviour
 
     public void BuySpeed()
     {
-        if (GameManager.GetInstance().numberSpeedBought < maxAmount && GameManager.GetInstance().numberOfCoins >= 15)
+        if (GameManager.GetInstance().numberSpeedBought < maxAmount && GameManager.GetInstance().numberOfCoins >= 10)
         {
             GameManager.GetInstance().playerSpeed++;
             GameManager.GetInstance().numberSpeedBought++;
-            GameManager.GetInstance().numberOfCoins = GameManager.GetInstance().numberOfCoins - 15;
+            GameManager.GetInstance().numberOfCoins = GameManager.GetInstance().numberOfCoins - 10;
         }
         else
         {
