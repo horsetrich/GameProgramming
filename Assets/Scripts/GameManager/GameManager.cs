@@ -6,7 +6,7 @@ using TMPro;
 public class GameManager : MonoBehaviour, IDataPersistence
 {
 
-    private static GameManager instance;
+    public static GameManager instance;
 
     public int playerDamage = 1;
     public float playerSpeed = 10f;

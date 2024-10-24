@@ -4837,6 +4837,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 628563362051904486, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
   m_PrefabInstance: {fileID: 5111316220794351674}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1450555294 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8943814550002873883, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+  m_PrefabInstance: {fileID: 5111316220794351674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450555293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcd77253396e45a4e83ce1619f2b7486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1450555296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8429333968113429887, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+  m_PrefabInstance: {fileID: 5111316220794351674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450555293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd6e12edaa267b419903558df8fe561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1458949904
 GameObject:
   m_ObjectHideFlags: 0
@@ -12263,6 +12285,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
+      value: d117468a-3ad5-4253-949b-17a171e751c5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
+      value: bfdff56a-1768-4042-bd20-cc90ccd39c13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
+      value: 034c2aa5-4c46-43ce-ab15-5fc10f8c1cb0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
+      value: Gameplay/Interact[/Keyboard/i]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
+      value: Gameplay/Submit[/Keyboard/space]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
+      value: Gameplay/Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1450555296}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPotionInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerInputHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169466954954757111, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8429333968113429887, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1450555294}
     - target: {fileID: 8943814550002873883, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 

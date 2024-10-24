@@ -8,6 +8,9 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerInput playerInput;
     private Camera cam;
 
+    [SerializeField] private PlayerHealth playerHealth;
+    // [SerializeField] private GameManager gameManager;
+
 
     public Vector2 RawMovementInput { get; private set; }
     public Vector2 RawDashDirectionInput{get;private set;}
@@ -22,6 +25,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool AttackInput { get; private set; }
     public bool DashInput {get;private set;}
     public bool DashInputStop{get;private set;}
+
+    public bool PotionInput{get;private set;}
 
 
 
@@ -133,6 +138,17 @@ public class PlayerInputHandler : MonoBehaviour
         }
 
         DashDirectionInput = Vector2Int.RoundToInt(RawDashDirectionInput.normalized);
+    }
+
+    public void OnPotionInput(InputAction.CallbackContext context)
+    {
+        if (context.started && GameManager.GetInstance().potions >= 1 
+        && playerHealth.health < 8) //if button is pressed and you have potions AND 
+        //your health isn't maxxed out
+        {
+            GameManager.GetInstance().potions--;
+            playerHealth.AddHealth(3f);
+        }
     }
 
     public void UseDefendInput() => DefendInput = false;
