@@ -38,6 +38,8 @@ public class ShopManager : MonoBehaviour
 
     public void EnterShopMode()
     {
+        int value = Random.Range(1, 3);
+        Debug.Log(value);
         shopPanel.SetActive(true);
         shopping = true;
         StartCoroutine(SelectFirstChoice());
@@ -56,6 +58,7 @@ public class ShopManager : MonoBehaviour
             GameManager.GetInstance().playerDamage++;
             GameManager.GetInstance().numberDamageBought++;
             GameManager.GetInstance().numberOfCoins = GameManager.GetInstance().numberOfCoins - 20;
+            GameManager.GetInstance().UpdateCoinText();
         }
         else
         {
@@ -70,6 +73,7 @@ public class ShopManager : MonoBehaviour
             GameManager.GetInstance().playerSpeed++;
             GameManager.GetInstance().numberSpeedBought++;
             GameManager.GetInstance().numberOfCoins = GameManager.GetInstance().numberOfCoins - 10;
+            GameManager.GetInstance().UpdateCoinText();
         }
         else
         {
@@ -83,6 +87,7 @@ public class ShopManager : MonoBehaviour
         {
             GameManager.GetInstance().potions++;
             GameManager.GetInstance().numberOfCoins = GameManager.GetInstance().numberOfCoins - 5;
+            GameManager.GetInstance().UpdateCoinText();
         }
         else
         {

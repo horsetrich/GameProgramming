@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour, IDataPersistence
 {
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public int numberDamageBought = 0;
     public int numberSpeedBought = 0;
     public int numberJumpsBought = 0;
+
+    public TextMeshProUGUI coinText;
 
     private void Awake()
     {
@@ -39,6 +42,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         this.amountOfJumps = data.amountOfJumps;
         this.numberOfCoins = data.numberOfCoins;
         this.potions = data.potions;
+        GameManager.GetInstance().UpdateCoinText();
     }
     public void SaveData(GameData data)
     {
@@ -47,5 +51,10 @@ public class GameManager : MonoBehaviour, IDataPersistence
         data.amountOfJumps = this.amountOfJumps;
         data.numberOfCoins = this.numberOfCoins;
         data.potions = this.potions;
+    }
+
+    public void UpdateCoinText()
+    {
+        coinText.text = "X "+numberOfCoins;
     }
 }
