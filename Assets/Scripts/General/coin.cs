@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class coin : MonoBehaviour
 {
-    public int maxValue;
-    public int minValue;
+    private int maxValue = 4;
+    private int minValue = 1;
 
-    public int value;
+    private int value;
 
     public void Start()
     {
