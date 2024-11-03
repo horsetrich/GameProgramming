@@ -52,6 +52,10 @@ public class BossSpirit : MonoBehaviour
     private Transform summonPointTwo;
     [SerializeField]
     private Transform summonPointThree;
+    [SerializeField]
+    private Transform damagePoint;
+    [SerializeField]
+    private GameObject damageThing;
 
     public Transform teleportOne;
     public Transform teleportTwo;
@@ -212,6 +216,11 @@ public class BossSpirit : MonoBehaviour
 
     public void TurnOnHeart() => hurtPoint.SetActive(true);
     public void TurnOffHeart() => hurtPoint.SetActive(false);
+
+    public void MakeThing()
+    {
+        Instantiate(damageThing, damagePoint, true);
+    }
 
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
     private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();

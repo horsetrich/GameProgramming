@@ -17,6 +17,7 @@ public class BossSpiritFloor : BspiritState
     {
         base.Enter();
         bossSpirit.counter = 0;
+        bossSpirit.MakeThing();
     }
 
     public override void Exit()

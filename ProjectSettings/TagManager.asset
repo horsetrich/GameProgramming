@@ -49,6 +49,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: DamageThing
+    uniqueID: 3491961547
+    locked: 0
   - name: Tilemap
     uniqueID: 2706623545
     locked: 0

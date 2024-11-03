@@ -12,6 +12,7 @@ public class GameData
     public int amountOfJumps;
     public int numberOfCoins;
     public int potions;
+    public string sceneName;
 
 
     public GameData()
@@ -23,5 +24,6 @@ public class GameData
         amountOfJumps = 1;
         numberOfCoins = 0;
         potions = 0;
+        sceneName = "";
     }
 }
