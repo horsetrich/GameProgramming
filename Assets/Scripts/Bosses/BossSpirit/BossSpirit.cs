@@ -23,6 +23,7 @@ public class BossSpirit : MonoBehaviour
     public BossSpiritFloor BossSpiritFloor { get; private set; }
     public BossSecondSummon BossSecondSummon { get; private set; }
     public BossSpiritHurt BossSpiritHurt { get; private set; }
+    public BossDeadState BossDeadState { get; private set; }
 
     [SerializeField]
     private BossSpiritData bossData;
@@ -71,6 +72,7 @@ public class BossSpirit : MonoBehaviour
     public bool stop = false;
     public int teleport = 0;
     public bool secondPhase = false;
+    public bool isDead = false;
     public Vector3 scale = new Vector3(1f, 1f, 1f);
 
     private void Awake()
@@ -89,6 +91,7 @@ public class BossSpirit : MonoBehaviour
         BossSpiritFloor = new BossSpiritFloor(this, StateMachine, bossData, "bossSkill");
         BossSecondSummon = new BossSecondSummon(this, StateMachine, bossData, "bossSummon");
         BossSpiritHurt = new BossSpiritHurt(this, StateMachine, bossData, "bossSkill");
+        BossDeadState = new BossDeadState(this, StateMachine, bossData, "death");
     }
 
     private void Start()
@@ -175,9 +178,9 @@ public class BossSpirit : MonoBehaviour
 
     public void SummonEnemy()
     {
-        Instantiate(summonSpirit, summonPointOne, true);
-        Instantiate(summonSpiritTwo, summonPointTwo, true);
-        Instantiate(summonSpiritThree, summonPointThree, true);
+        Instantiate(summonSpirit, summonPointOne.position, Quaternion.identity);
+        Instantiate(summonSpiritTwo, summonPointTwo.position, Quaternion.identity);
+        Instantiate(summonSpiritThree, summonPointThree.position, Quaternion.identity);
     }
 
     public IEnumerator ScaleOverTime(float duration, float scale)
@@ -205,7 +208,7 @@ public class BossSpirit : MonoBehaviour
     }
 
     public void SecondPhase() => secondPhase = true;
-    public void DoneSecondPhase() => secondPhase = false;
+    public void BossIsDead() => isDead = false;
     public void TeleportOne() => transform.position = teleportOne.transform.position;
 
     public void TeleportTwo() => transform.position = teleportTwo.transform.position;
@@ -219,7 +222,17 @@ public class BossSpirit : MonoBehaviour
 
     public void MakeThing()
     {
-        Instantiate(damageThing, damagePoint, true);
+        Instantiate(damageThing, damagePoint.position, Quaternion.identity);
+    }
+
+    public void Reward()
+    {
+        //Instantiate a reward for killing the boss
+    }
+
+    public void SelfDestruct()
+    {
+        Destroy(gameObject);
     }
 
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();

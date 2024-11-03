@@ -1294,7 +1294,6 @@ Transform:
   - {fileID: 497341103}
   - {fileID: 863424897}
   - {fileID: 1162036351}
-  - {fileID: 1970491295}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &421680500 stripped
@@ -9279,7 +9278,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.45, y: 0.62}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.45, y: 0.62}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9420,6 +9419,7 @@ MonoBehaviour:
   stop: 0
   teleport: 0
   secondPhase: 0
+  isDead: 0
   scale: {x: 1, y: 1, z: 1}
 --- !u!114 &1395000610
 MonoBehaviour:
@@ -15862,12 +15862,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970491294}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.322, y: -2.64, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.53344536, y: -26.38, z: 0}
+  m_LocalScale: {x: 8.302626, y: 8.302626, z: 8.302626}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 420994872}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971227716
 GameObject:
@@ -17404,3 +17404,4 @@ SceneRoots:
   - {fileID: 1151889918}
   - {fileID: 1734660111}
   - {fileID: 1177988051}
+  - {fileID: 1970491295}

@@ -34,6 +34,10 @@ public class BossSpiritHurt : BspiritState
         {
             stateMachine.ChangeState(bossSpirit.BossSecondSummon);
         }
+        else if (bossSpirit.isDead)
+        {
+            stateMachine.ChangeState(bossSpirit.BossDeadState);
+        }
     }
 
     public override void PhysicsUpdate()

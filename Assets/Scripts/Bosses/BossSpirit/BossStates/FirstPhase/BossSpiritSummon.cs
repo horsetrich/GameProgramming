@@ -35,7 +35,7 @@ public class BossSpiritSummon : BspiritState
         {
             stateMachine.ChangeState(bossSpirit.BossSpiritSkill);
         }
-        else if (bossSpirit.secondPhase && bossSpirit.secondPhase == false)
+        else if (bossSpirit.secondPhase)
         {
             stateMachine.ChangeState(bossSpirit.BossSpiritDead);
         }
