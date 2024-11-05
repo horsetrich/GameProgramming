@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5042212252681347645}
   - component: {fileID: 7323312413455783745}
   - component: {fileID: 7928325304937969260}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SummonSpirit
   m_TagString: Spirit
   m_Icon: {fileID: 0}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1958401903
-  m_SortingLayer: 3
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1927875572, guid: 6a10cbb724c90b24a91a05f0e68605fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

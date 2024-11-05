@@ -208,7 +208,7 @@ public class BossSpirit : MonoBehaviour
     }
 
     public void SecondPhase() => secondPhase = true;
-    public void BossIsDead() => isDead = true;
+    public void BossIsDead() => isDead = false;
     public void TeleportOne() => transform.position = teleportOne.transform.position;
 
     public void TeleportTwo() => transform.position = teleportTwo.transform.position;
@@ -232,7 +232,7 @@ public class BossSpirit : MonoBehaviour
 
     public void SelfDestruct()
     {
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject);
     }
 
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();

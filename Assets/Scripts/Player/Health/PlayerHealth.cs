@@ -160,7 +160,7 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator Invunerability()
     {
-        Physics2D.IgnoreLayerCollision(6, 8, true);
+        Physics2D.IgnoreLayerCollision(7, 8, true);
         for (int i = 0; i < numberOfFlashes; i++)
         {
             spriteRend.color = new Color(1, 0, 0, 0.5f);
@@ -168,7 +168,7 @@ public class PlayerHealth : MonoBehaviour
             spriteRend.color = Color.white;
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
-        Physics2D.IgnoreLayerCollision(6, 8, false);
+        Physics2D.IgnoreLayerCollision(7, 8, false);
 
     }
 
@@ -194,7 +194,7 @@ public class PlayerHealth : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Spirit") || collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Spirit"))
         {
             TakeDamage(damage);
         }

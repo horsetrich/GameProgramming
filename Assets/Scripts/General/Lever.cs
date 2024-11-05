@@ -14,7 +14,6 @@ public class Lever : MonoBehaviour
 
     public bool turnedOn = false;
 
-    [SerializeField] private BossHealth bossHealth;
     public void TurnOn() => turnedOn = true;
 
     public float counter = 0;
@@ -31,10 +30,6 @@ public class Lever : MonoBehaviour
         if (turnedOn)
         {
             TurnOff();
-        }
-        if (bossHealth.secondPhase)
-        {
-            Destroy(gameObject);
         }
     }
 

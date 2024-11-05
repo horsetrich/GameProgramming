@@ -16,14 +16,12 @@ public class BossDeadState : BspiritState
     public override void Enter()
     {
         base.Enter();
-        bossSpirit.Reward();
         
     }
 
     public override void Exit()
     {
         base.Exit();
-        bossSpirit.SelfDestruct();
     }
 
     public override void LogicUpdate()
@@ -31,6 +29,7 @@ public class BossDeadState : BspiritState
         base.LogicUpdate();
         if (isAnimationFinished)
         {
+            bossSpirit.Reward();
             bossSpirit.SelfDestruct();
         }
     }

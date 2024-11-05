@@ -12,7 +12,7 @@ public class BossHealth : MonoBehaviour
     public string secondBool;
     public bool canKill;
     public int enemyHealth = 3;
-    public bool secondPhase = false;
+    private bool secondPhase = false;
     private bool isDead = false;
     private Animator animator;
     private Rigidbody2D rb;
