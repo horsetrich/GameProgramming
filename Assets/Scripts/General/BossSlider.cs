@@ -34,8 +34,16 @@ public class BossSlider : MonoBehaviour
         CheckHealth();
 
         playerPos = player.transform.position;
+        if (boss == null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            bossPos = boss.transform.position;
+        }
 
-        bossPos = boss.transform.position;
+
     }
 
     public bool BeginFightHealth()
