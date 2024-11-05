@@ -20,7 +20,15 @@ public class EnemyHealth : MonoBehaviour
 
     private void Awake()
     {
-        healthBar = GetComponentInChildren<FloatingHealthBar>();
+        if(healthBar != null)
+        {
+            healthBar = GetComponentInChildren<FloatingHealthBar>();
+        }
+        else
+        {
+            return;
+        }
+
     }
 
     // Start is called before the first frame update
@@ -35,7 +43,15 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthBar.UpdateHealthBar(enemyHealth);
+        if(healthBar != null)
+        {
+            healthBar.UpdateHealthBar(enemyHealth);
+        }
+        else
+        {
+            return;
+        }
+
     }
 
     public void CanKill() => canKill = true;
@@ -76,6 +92,11 @@ public class EnemyHealth : MonoBehaviour
 
                     Destroy(gameObject);
                 }
+            }
+            else if(this.gameObject == gameObject.CompareTag("Enemy"))
+            {
+                GameObject coinObj = Instantiate(coin, gameObject.transform.position, gameObject.transform.rotation);
+                Destroy(gameObject);
             }
             rb.velocity = Vector2.zero;
         }
