@@ -12,7 +12,6 @@ TagManager:
   - Boss
   - Health
   - BossHeart
-  - Boundary
   layers:
   - Default
   - TransparentFX
