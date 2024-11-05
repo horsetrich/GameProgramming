@@ -9533,6 +9533,7 @@ MonoBehaviour:
   secondBool: 
   canKill: 0
   enemyHealth: 0
+  secondPhase: 0
   healthBar: {fileID: 1421264459}
 --- !u!1001 &1403800876
 PrefabInstance:
@@ -15264,6 +15265,7 @@ MonoBehaviour:
   lightSource: {fileID: 6648103054719496006, guid: 4de86c5550398d74bb9baa5cd1691a8c, type: 3}
   source: {fileID: 1566110316}
   turnedOn: 0
+  bossHealth: {fileID: 1395000610}
   counter: 0
 --- !u!58 &1812052493
 CircleCollider2D:
