@@ -2149,7 +2149,7 @@ MonoBehaviour:
   smoothSpeed: 10
   minX: -27
   maxX: 144
-  minY: -37
+  minY: -39
   maxY: -5
 --- !u!114 &1346454639
 MonoBehaviour:
