@@ -644,5 +644,5 @@ MonoBehaviour:
   secondBool: goblinHurt
   canKill: 0
   enemyHealth: 0
-  coin: {fileID: 0}
+  coin: {fileID: 4148202343764969930, guid: d49a51b2408aca44f8b29bb2d2c23149, type: 3}
   healthBar: {fileID: 0}

@@ -15999,7 +15999,7 @@ MonoBehaviour:
   playerSpeed: 10
   amountOfJumps: 1
   numberOfCoins: 0
-  potions: 0
+  potions: 5
   numberDamageBought: 0
   numberSpeedBought: 0
   numberJumpsBought: 0
