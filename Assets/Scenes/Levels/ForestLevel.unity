@@ -375,7 +375,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 91729882c8b2f334a863f5e66b177f5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742d885f0c29b7f4782795c91b640f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxFactor: 0
+  parallaxFactor: 2
 --- !u!4 &234086401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 921352545567637417, guid: ba892f8097812f248b7b7563ed8197ec, type: 3}
@@ -672,8 +672,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1310533319}
     - target: {fileID: 3602949547541460243, guid: c4afe8e7f1fe53f469342f743c01d215, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602949547541460243, guid: c4afe8e7f1fe53f469342f743c01d215, type: 3}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602949547541460243, guid: c4afe8e7f1fe53f469342f743c01d215, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 452826343
       objectReference: {fileID: 0}
     - target: {fileID: 7206180343520657981, guid: c4afe8e7f1fe53f469342f743c01d215, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1091,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742d885f0c29b7f4782795c91b640f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxFactor: 0
+  parallaxFactor: 1
 --- !u!212 &791618665
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18595,7 +18603,7 @@ MonoBehaviour:
   m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000cb1a23d039cc53a19128458b792a164f
+  m_ApplyToSortingLayers: 00000000cb1a23d039cc53a19128458b792a164fe794fd1a
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
