@@ -12,6 +12,8 @@ TagManager:
   - Boss
   - Health
   - BossHeart
+  - RightBound
+  - LeftBound
   layers:
   - Default
   - TransparentFX
@@ -60,4 +62,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1326852729
+    locked: 0
+  - name: Enemies
+    uniqueID: 452826343
     locked: 0
