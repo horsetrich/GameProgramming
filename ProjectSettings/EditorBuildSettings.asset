@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/GrassyLevel.unity
     guid: 699b12d3063c71d40b1bc9e763b10acc
   - enabled: 1
-    path: Assets/Scenes/ForestLevel.unity
+    path: Assets/Scenes/Levels/ForestLevel.unity
     guid: c1be8831993c11144a32babe35e5656c
   - enabled: 1
     path: Assets/Scenes/Levels/CaveLevel.unity
