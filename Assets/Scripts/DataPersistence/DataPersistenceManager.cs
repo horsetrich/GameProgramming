@@ -33,6 +33,11 @@ public class DataPersistenceManager : MonoBehaviour
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
     }
 
+    public static DataPersistenceManager GetInstance()
+    {
+        return Instance;
+    }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -88,11 +93,12 @@ public class DataPersistenceManager : MonoBehaviour
         }
 
         dataHandler.Save(gameData);
+        Debug.Log("Game saved");
     }
 
     private void OnApplicationQuit()
     {
-        SaveGame();
+        //SaveGame();
     }
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()

@@ -56,6 +56,14 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public void UpdateCoinText()
     {
-        coinText.text = "X "+numberOfCoins;
+        if(coinText == null)
+        {
+            return;
+        }
+        else
+        {
+            coinText.text = "X " + numberOfCoins;
+        }
+        
     }
 }

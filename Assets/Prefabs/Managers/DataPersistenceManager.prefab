@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initializeDataIfNull: 1
-  fileName: data.game
+  fileName: gameData
   useEncryption: 0

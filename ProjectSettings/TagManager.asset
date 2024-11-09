@@ -48,6 +48,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1317140887
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -57,11 +60,11 @@ TagManager:
   - name: Tilemap
     uniqueID: 2706623545
     locked: 0
-  - name: ForeGround
-    uniqueID: 2336565393
-    locked: 0
   - name: Player
     uniqueID: 1326852729
+    locked: 0
+  - name: ForeGround
+    uniqueID: 2336565393
     locked: 0
   - name: Enemies
     uniqueID: 452826343

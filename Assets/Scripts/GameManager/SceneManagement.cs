@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneManagement : MonoBehaviour, IDataPersistence
 {
     public string scene;
+    public string sceneToLoad;
 
     public static SceneManagement instance;
     // Start is called before the first frame update
@@ -34,9 +35,14 @@ public class SceneManagement : MonoBehaviour, IDataPersistence
         scene = SceneManager.GetActiveScene().name;
     }
 
+    public void BeginGame()
+    {
+        SceneManager.LoadScene(sceneToLoad);
+    }
+
     public void LoadData(GameData data)
     {
-
+        this.sceneToLoad = data.sceneName;
     }
 
     public void SaveData(GameData data)

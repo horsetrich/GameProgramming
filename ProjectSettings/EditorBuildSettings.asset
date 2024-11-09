@@ -8,4 +8,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Rest Areas/Village-grassy.unity
+    guid: 740a81d3490a60c4cac84950132f4edb
+  - enabled: 1
+    path: Assets/Scenes/Levels/GraveyardLevel.unity
+    guid: c9a687c67a197ae41af683d8785b2250
+  - enabled: 1
+    path: Assets/Scenes/Levels/GrassyLevel.unity
+    guid: 699b12d3063c71d40b1bc9e763b10acc
+  - enabled: 1
+    path: Assets/Scenes/Levels/ForestLevel.unity
+    guid: c1be8831993c11144a32babe35e5656c
+  - enabled: 1
+    path: Assets/Scenes/Levels/CaveLevel.unity
+    guid: a5a4f18da35e332449ba1346a956d8d1
+  - enabled: 1
+    path: Assets/Scenes/Menus/Main Menu.unity
+    guid: 5278ddf67fabc2b43bfe1a233cfe8a35
+  - enabled: 1
+    path: Assets/Scenes/Menus/GameOver.unity
+    guid: 5841914baa63db845982af11e9331de6
+  - enabled: 1
+    path: Assets/Scenes/Rest Areas/Village-forrest.unity
+    guid: 55f312c8d71b0494db0b504c1abd1755
+  - enabled: 1
+    path: Assets/Scenes/Rest Areas/Village-cave.unity
+    guid: 102b3e0833e2e654dac95596bc097bdf
   m_configObjects: {}
