@@ -87014,7 +87014,7 @@ GameObject:
   - component: {fileID: 1121421746}
   - component: {fileID: 1121421745}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: Global Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88247,6 +88247,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2160990106780159708, guid: a929b5dddcac08949b88e48f7021dfd0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160990106780159708, guid: a929b5dddcac08949b88e48f7021dfd0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.24
+      objectReference: {fileID: 0}
     - target: {fileID: 2457173606091691040, guid: a929b5dddcac08949b88e48f7021dfd0, type: 3}
       propertyPath: bossHealth
       value: 
@@ -88255,6 +88263,18 @@ PrefabInstance:
       propertyPath: bossSpirit
       value: 
       objectReference: {fileID: 202813525}
+    - target: {fileID: 3443228824077480420, guid: a929b5dddcac08949b88e48f7021dfd0, type: 3}
+      propertyPath: m_Radius
+      value: 1.9568014
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443228824077480420, guid: a929b5dddcac08949b88e48f7021dfd0, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.09957886
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443228824077480420, guid: a929b5dddcac08949b88e48f7021dfd0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.79290676
+      objectReference: {fileID: 0}
     - target: {fileID: 7115987541525104444, guid: a929b5dddcac08949b88e48f7021dfd0, type: 3}
       propertyPath: m_Name
       value: Lever
@@ -88568,7 +88588,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
