@@ -18,8 +18,10 @@ public class SaveGame : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Should save?");
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Should save");
             DataPersistenceManager.GetInstance().SaveGame();
         }
     }
