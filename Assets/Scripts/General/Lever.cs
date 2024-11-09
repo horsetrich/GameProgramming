@@ -23,17 +23,10 @@ public class Lever : MonoBehaviour
     public void Start()
     {
         animator = GetComponent<Animator>();
-        gameObject.SetActive(false);
     }
 
     public void Update()
     {
-        isThere = bossSpirit.BeginFight();
-        if(isThere)
-        {
-            Debug.Log("Turned on");
-            gameObject.SetActive(true);
-        }
         counter += Time.deltaTime;
         FlipSwitch();
         if (turnedOn)
