@@ -572,6 +572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4816228371752062650, guid: 2690bc61e68725a4fada0ab5f6983d4b, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1080863307}
     - target: {fileID: 7181178007659053287, guid: 2690bc61e68725a4fada0ab5f6983d4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 385.89636
@@ -4019,6 +4023,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1685545817374491211, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
   m_PrefabInstance: {fileID: 2065485772}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1080863307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1102057411745560197, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
+  m_PrefabInstance: {fileID: 1451811592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1087501673 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6857858494381861529, guid: 0d1d9c83f1e0ec041966b28a1ce51c78, type: 3}
@@ -76440,6 +76455,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 697166397523061663, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -242
+      objectReference: {fileID: 0}
+    - target: {fileID: 697166397523061663, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 203
+      objectReference: {fileID: 0}
     - target: {fileID: 3284476648271724325, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -76503,6 +76526,14 @@ PrefabInstance:
     - target: {fileID: 5044291476870594027, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234324472972970584, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234324472972970584, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6754372750930735278, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
