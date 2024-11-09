@@ -12804,18 +12804,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1151889918}
     m_Modifications:
-    - target: {fileID: 2034160935524861559, guid: c4afe8e7f1fe53f469342f743c01d215, type: 3}
-      propertyPath: coin
-      value: 
-      objectReference: {fileID: 4148202343764969930, guid: d49a51b2408aca44f8b29bb2d2c23149, type: 3}
-    - target: {fileID: 2550663804904196645, guid: c4afe8e7f1fe53f469342f743c01d215, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4145856802715364413, guid: c4afe8e7f1fe53f469342f743c01d215, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1450555293}
     - target: {fileID: 7206180343520657981, guid: c4afe8e7f1fe53f469342f743c01d215, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -12867,10 +12855,6 @@ PrefabInstance:
     - target: {fileID: 8214952135958990531, guid: c4afe8e7f1fe53f469342f743c01d215, type: 3}
       propertyPath: m_Name
       value: Goblin
-      objectReference: {fileID: 0}
-    - target: {fileID: 8214952135958990531, guid: c4afe8e7f1fe53f469342f743c01d215, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
