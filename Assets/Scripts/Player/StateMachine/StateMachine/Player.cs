@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Player : MonoBehaviour, IDataPersistence
+public class Player : MonoBehaviour
 {
     #region State Variables
     public PlayerStateMachine StateMachine {  get; private set; }
@@ -97,6 +97,7 @@ public class Player : MonoBehaviour, IDataPersistence
         {
             return;
         }
+
         CurrentVelocity = rb.velocity;
         StateMachine.CurrentState.LogicUpdate();
     }
@@ -259,14 +260,5 @@ public class Player : MonoBehaviour, IDataPersistence
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
     #endregion
-
-    public void LoadData(GameData data)
-    {
-        this.transform.position = data.playerPosition;
-    }
-    public void SaveData(GameData data)
-    {
-        data.playerPosition = this.transform.position;
-    }
 }
 

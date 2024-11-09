@@ -9,12 +9,13 @@ public class Lever : MonoBehaviour
     private GameObject lightSource;
     [SerializeField]
     private Transform source;
-
+    private bool isThere = false;
     private Animator animator;
 
     public bool turnedOn = false;
 
     [SerializeField] private BossHealth bossHealth;
+    [SerializeField] private BossSpirit bossSpirit;
     public void TurnOn() => turnedOn = true;
 
     public float counter = 0;
@@ -22,10 +23,17 @@ public class Lever : MonoBehaviour
     public void Start()
     {
         animator = GetComponent<Animator>();
+        gameObject.SetActive(false);
     }
 
     public void Update()
     {
+        isThere = bossSpirit.BeginFight();
+        if(isThere)
+        {
+            Debug.Log("Turned on");
+            gameObject.SetActive(true);
+        }
         counter += Time.deltaTime;
         FlipSwitch();
         if (turnedOn)

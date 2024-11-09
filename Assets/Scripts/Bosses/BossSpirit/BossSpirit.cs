@@ -148,6 +148,7 @@ public class BossSpirit : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
+            Debug.Log("Hitting");
             enemy.GetComponent<PlayerHealth>().TakeDamage(bossData.bossDamage);
         }
     }

@@ -30,9 +30,14 @@ public class MainMenu : MonoBehaviour
 
     public void OnContinueGameClicked()
     {
-        SceneManager.LoadSceneAsync("SampleScene");
+        SceneManager.LoadSceneAsync(SceneManagement.GetInstance().sceneToLoad);
 
         DisableMenuButtons();
+    }
+
+    public void ExitApplication()
+    {
+        Application.Quit();
     }
 
     private void DisableMenuButtons()
