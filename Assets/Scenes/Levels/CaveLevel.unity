@@ -1456,7 +1456,7 @@ MonoBehaviour:
   minX: -70.6
   maxX: 144
   minY: -120.5
-  maxY: -5
+  maxY: -80
 --- !u!114 &755660993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2240,6 +2240,7 @@ GameObject:
   - component: {fileID: 966223627}
   - component: {fileID: 966223629}
   - component: {fileID: 966223628}
+  - component: {fileID: 966223630}
   m_Layer: 0
   m_Name: next level
   m_TagString: Untagged
@@ -2349,6 +2350,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &966223630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966223626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc6981fb17900f469a3df46e30d6c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Village-cave
 --- !u!1001 &974130812
 PrefabInstance:
   m_ObjectHideFlags: 0
