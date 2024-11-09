@@ -23,6 +23,7 @@ public class SceneManagement : MonoBehaviour, IDataPersistence
             return;
         }
         instance = this;
+
     }
 
     public static SceneManagement GetInstance()
