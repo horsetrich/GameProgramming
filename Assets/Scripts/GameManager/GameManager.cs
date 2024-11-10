@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public int numberJumpsBought = 0;
 
     public TextMeshProUGUI coinText;
+    public PlayerData data = null;
 
     private void Awake()
     {
@@ -64,6 +65,14 @@ public class GameManager : MonoBehaviour, IDataPersistence
         {
             coinText.text = "X " + numberOfCoins;
         }
-        
+    }
+    public void UpdateNumOfJumps()
+    {
+        data.amountOfJumps+=1; //gives an extra jump
+    }
+    public void AssignObjects()
+    {
+        data = GameObject.Find("Player").GetComponent<Player>().playerData; //finds a player in scene and applies its game playerData to data for changing
+        coinText = GameObject.Find("coin").GetComponent<TextMeshProUGUI>();
     }
 }
