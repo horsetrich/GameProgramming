@@ -10,6 +10,7 @@ public class NextScene : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            DataPersistenceManager.GetInstance().SaveGame();
             SceneManager.LoadScene(sceneName);
         }
     }
