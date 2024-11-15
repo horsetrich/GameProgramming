@@ -22,8 +22,7 @@ public class Player : MonoBehaviour
 
     public PlayerDashState DashState    {get; private set;}
 
-    [SerializeField]
-    private PlayerData playerData;
+    public PlayerData playerData;
 
     #endregion
 
@@ -60,7 +59,8 @@ public class Player : MonoBehaviour
     #region Unity Callback Functions
     private void Awake()
     {
-        StateMachine = new PlayerStateMachine();
+        StateMachine = new PlayerStateMachine();  
+        GameManager.GetInstance().AssignObjects();      
 
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
