@@ -87698,11 +87698,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1685545817374491211, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 110.53815
+      value: -40.1
       objectReference: {fileID: 0}
     - target: {fileID: 1685545817374491211, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -41.727016
+      value: -36.4
       objectReference: {fileID: 0}
     - target: {fileID: 1685545817374491211, guid: dc340cf3d15dcf64b9836099dcfb1f08, type: 3}
       propertyPath: m_LocalPosition.z
@@ -88140,7 +88140,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 90427340442830081, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 377614330400277652, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -88160,11 +88160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_Pivot.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -88184,27 +88184,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 1131.3333
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 586.6667
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0
+      value: 0.06704727
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0
+      value: 0.06704727
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0
+      value: 0.06704727
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 90.02561
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -88220,11 +88220,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 147.1
       objectReference: {fileID: 0}
     - target: {fileID: 5361993808482032629, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -67
       objectReference: {fileID: 0}
     - target: {fileID: 6332314717238671695, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_Name
@@ -88256,7 +88256,7 @@ PrefabInstance:
       objectReference: {fileID: 1994856470}
     - target: {fileID: 7035280117419484439, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_RenderMode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7035280117419484439, guid: 683cd90381462404dbb90bfb2823806b, type: 3}
       propertyPath: m_SortingLayerID

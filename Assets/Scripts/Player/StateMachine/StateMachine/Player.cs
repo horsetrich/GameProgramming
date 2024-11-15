@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         StateMachine = new PlayerStateMachine();  
-        GameManager.GetInstance().AssignObjects();      
+     
 
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
@@ -78,6 +78,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        GameManager.GetInstance().AssignObjects();
         Anim = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         rb = GetComponent<Rigidbody2D>();
