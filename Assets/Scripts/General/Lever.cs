@@ -23,6 +23,7 @@ public class Lever : MonoBehaviour
     public void Start()
     {
         animator = GetComponent<Animator>();
+        gameObject.SetActive(true);
     }
 
     public void Update()
