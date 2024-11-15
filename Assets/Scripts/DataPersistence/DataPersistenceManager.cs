@@ -23,7 +23,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.LogError("More than one found");
+            // Debug.LogError("More than one found");
             Destroy(this.gameObject);
             return;
         }
