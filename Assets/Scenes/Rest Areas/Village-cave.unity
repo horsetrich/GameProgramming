@@ -346,7 +346,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1637827067}
     m_Modifications:
     - target: {fileID: 2501531644187292839, guid: 3161c6f6dab4c574aa74059298cfbca3, type: 3}
       propertyPath: m_Name
@@ -358,15 +358,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8854596591605003147, guid: 3161c6f6dab4c574aa74059298cfbca3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.54545
+      value: 24.753315
       objectReference: {fileID: 0}
     - target: {fileID: 8854596591605003147, guid: 3161c6f6dab4c574aa74059298cfbca3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.27098608
+      value: -1.2145269
       objectReference: {fileID: 0}
     - target: {fileID: 8854596591605003147, guid: 3161c6f6dab4c574aa74059298cfbca3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.09398852
+      value: 0.19860262
       objectReference: {fileID: 0}
     - target: {fileID: 8854596591605003147, guid: 3161c6f6dab4c574aa74059298cfbca3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25866,6 +25866,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1241302486}
+  - {fileID: 1770125526}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641870225
@@ -26002,6 +26003,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: GraveyardLevel
+--- !u!4 &1770125526 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8854596591605003147, guid: 3161c6f6dab4c574aa74059298cfbca3, type: 3}
+  m_PrefabInstance: {fileID: 116226444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1846899198
 GameObject:
   m_ObjectHideFlags: 0
@@ -26221,7 +26227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1918691237}
-  inkJSON: {fileID: 4900000, guid: df2f15774fc084643820a68628fb3876, type: 3}
+  inkJSON: {fileID: 4900000, guid: 9a10a151dcdf80f43b792334f5824c4a, type: 3}
 --- !u!61 &1947914759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26407,4 +26413,3 @@ SceneRoots:
   - {fileID: 1605983198}
   - {fileID: 716753736}
   - {fileID: 1241526452}
-  - {fileID: 116226444}
