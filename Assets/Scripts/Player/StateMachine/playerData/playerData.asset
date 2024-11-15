@@ -35,7 +35,7 @@ MonoBehaviour:
   drag: 10
   dashEndYMultiplier: 0.2
   distBetweenAfterImages: 0.5
-  groundCheckRadius: 0.3
+  groundCheckRadius: 0.1
   wallCheckDistance: 0.5
   whatIsGround:
     serializedVersion: 2
