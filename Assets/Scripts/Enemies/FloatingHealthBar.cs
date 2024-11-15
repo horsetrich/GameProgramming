@@ -7,14 +7,9 @@ public class FloatingHealthBar : MonoBehaviour
 {
     [SerializeField] private Slider slider;
 
-
-    public void UpdateHealthBar(int currentValue)
+public void UpdateHealthBar(int currentValue)
     {
         slider.value = currentValue;
-    }
-    public void Start()
-    {
-
     }
 
     // Update is called once per frame
