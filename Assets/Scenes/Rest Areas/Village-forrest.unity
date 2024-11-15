@@ -2847,11 +2847,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 697166397523061663, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -248
+      value: -296
       objectReference: {fileID: 0}
     - target: {fileID: 697166397523061663, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 205
+      value: 236.00002
       objectReference: {fileID: 0}
     - target: {fileID: 765610442265382029, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
       propertyPath: m_Pivot.x
@@ -3111,11 +3111,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5234324472972970584, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -23
+      value: -71
       objectReference: {fileID: 0}
     - target: {fileID: 5234324472972970584, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 30
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 5463130791598827643, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
       propertyPath: m_PresetInfoIsWorld
