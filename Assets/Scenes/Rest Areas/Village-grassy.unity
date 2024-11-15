@@ -1167,7 +1167,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 661388315}
-  - component: {fileID: 661388316}
   m_Layer: 0
   m_Name: Smith
   m_TagString: Untagged
@@ -1193,19 +1192,6 @@ Transform:
   - {fileID: 1084997471}
   m_Father: {fileID: 1035780591}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &661388316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661388314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52db3cdff5698fd4b8eed318831ec8cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visualCue: {fileID: 1084997470}
 --- !u!1001 &676525750
 PrefabInstance:
   m_ObjectHideFlags: 0
