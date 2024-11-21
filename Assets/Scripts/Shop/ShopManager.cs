@@ -58,7 +58,7 @@ public class ShopManager : MonoBehaviour
             GameManager.GetInstance().playerDamage++;
             GameManager.GetInstance().numberDamageBought++;
             GameManager.GetInstance().numberOfCoins = GameManager.GetInstance().numberOfCoins - 20;
-            GameManager.GetInstance().UpdateCoinText();
+            GameManager.GetInstance().UpdateUIText();
         }
         else
         {
@@ -73,7 +73,7 @@ public class ShopManager : MonoBehaviour
             GameManager.GetInstance().playerSpeed++;
             GameManager.GetInstance().numberSpeedBought++;
             GameManager.GetInstance().numberOfCoins = GameManager.GetInstance().numberOfCoins - 10;
-            GameManager.GetInstance().UpdateCoinText();
+            GameManager.GetInstance().UpdateUIText();
         }
         else
         {
@@ -87,7 +87,7 @@ public class ShopManager : MonoBehaviour
         {
             GameManager.GetInstance().potions++;
             GameManager.GetInstance().numberOfCoins = GameManager.GetInstance().numberOfCoins - 5;
-            GameManager.GetInstance().UpdateCoinText();
+            GameManager.GetInstance().UpdateUIText();
         }
         else
         {

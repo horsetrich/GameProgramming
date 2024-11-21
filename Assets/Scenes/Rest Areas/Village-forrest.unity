@@ -3370,6 +3370,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MakeChoice
       objectReference: {fileID: 0}
+    - target: {fileID: 8671782373882064480, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -297
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671782373882064480, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 193
+      objectReference: {fileID: 0}
     - target: {fileID: 9221002269622467470, guid: bf13ee2aecd6e094e8abec29aeb49ae9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
