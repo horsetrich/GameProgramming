@@ -138,7 +138,7 @@ public class PlayerInputHandler : MonoBehaviour
         DashDirectionInput = Vector2Int.RoundToInt(RawDashDirectionInput.normalized);
     }
 
-    public void OnPotionInput(InputAction.CallbackContext context)
+    public void UsePotionInput(InputAction.CallbackContext context)
     {
         if (context.started && GameManager.GetInstance().potions >= 1 
         && playerHealth.health < 8) //if button is pressed and you have potions AND 
@@ -148,6 +148,7 @@ public class PlayerInputHandler : MonoBehaviour
             playerHealth.AddHealth(3f);
         }
     }
+
 
     public void UseDefendInput() => DefendInput = false;
 

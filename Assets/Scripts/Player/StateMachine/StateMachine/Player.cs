@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
         {
             return;
         }
-            GameManager.GetInstance().UpdateCoinText();
+            GameManager.GetInstance().UpdateUIText();
         CurrentVelocity = rb.velocity;
         StateMachine.CurrentState.LogicUpdate();
     }

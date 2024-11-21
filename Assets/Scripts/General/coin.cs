@@ -20,7 +20,7 @@ public class coin : MonoBehaviour
         if (collision.tag == "Player") //if the player touches the coin
         {
             GameManager.GetInstance().numberOfCoins = GameManager.GetInstance().numberOfCoins + value; //give money
-            GameManager.GetInstance().UpdateCoinText();
+            GameManager.GetInstance().UpdateUIText();
             Destroy(this.gameObject); //destroy the coin after it is picked up
         }
     }

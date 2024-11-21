@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour, IDataPersistence
 {
@@ -19,6 +20,9 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public int numberJumpsBought = 0;
 
     public TextMeshProUGUI coinText;
+    public TextMeshProUGUI potionText;
+
+    
     public PlayerData data = null;
 
     private void Awake()
@@ -44,7 +48,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         this.amountOfJumps = data.amountOfJumps;
         this.numberOfCoins = data.numberOfCoins;
         this.potions = data.potions;
-        GameManager.GetInstance().UpdateCoinText();
+        GameManager.GetInstance().UpdateUIText();
     }
     public void SaveData(GameData data)
     {
@@ -55,17 +59,19 @@ public class GameManager : MonoBehaviour, IDataPersistence
         data.potions = this.potions;
     }
 
-    public void UpdateCoinText()
+    public void UpdateUIText()
     {
-        if(coinText == null)
+        if(coinText == null || potionText ==null)
         {
             return;
         }
         else
         {
             coinText.text = "X " + numberOfCoins;
+            potionText.text = "X "+potions;
         }
-    }
+    }    
+    
     public void UpdateNumOfJumps()
     {
         data.amountOfJumps+=1; //gives an extra jump
@@ -74,5 +80,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         data = GameObject.Find("Player").GetComponent<Player>().playerData; //finds a player in scene and applies its game playerData to data for changing
         coinText = GameObject.Find("coin").GetComponent<TextMeshProUGUI>();
+        potionText = GameObject.Find("potionUI").GetComponent<TextMeshProUGUI>();
+        
     }
 }
