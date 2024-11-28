@@ -19,6 +19,7 @@ public class GameOver : MonoBehaviour
 
     public void ExitGame()
     {
+        Debug.Log("Quitting Game...");
         Application.Quit();
     }
 
