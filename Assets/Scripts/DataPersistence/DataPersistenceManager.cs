@@ -13,7 +13,7 @@ public class DataPersistenceManager : MonoBehaviour
     [SerializeField] private string fileName;
     [SerializeField] private bool useEncryption;
 
-    private GameData gameData;
+    public GameData gameData;
     private List<IDataPersistence> dataPersistenceObjects;
 
     public static DataPersistenceManager Instance {  get; private set; }
@@ -57,7 +57,19 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void NewGame()
     {
-        this.gameData = new GameData();
+        if(this.gameData==null)
+        {
+            Debug.Log("game data is empty, creating new game");
+            this.gameData = new GameData();
+        }
+        else{
+            this.gameData.playerDamage = 1;
+            this.gameData.playerSpeed = 10f;
+            this.gameData.amountOfJumps = 1;
+            this.gameData.numberOfCoins = 0;
+            this.gameData.potions = 0;
+        }
+        dataHandler.Save(gameData);
     }
 
     public void LoadGame()
@@ -82,6 +94,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void SaveGame()
     {
+        Debug.Log("saving?");
         if(this.gameData == null)
         {
             return;

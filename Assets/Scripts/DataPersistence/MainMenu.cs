@@ -21,10 +21,7 @@ public class MainMenu : MonoBehaviour
     public void OnNewGameClicked()
     {
         DataPersistenceManager.Instance.NewGame();
-
         SceneManager.LoadSceneAsync("GrassyLevel");
-        
-
         DisableMenuButtons();
     }
 
