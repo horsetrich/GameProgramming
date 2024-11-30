@@ -1554,6 +1554,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5978176892468412991, guid: b6e417a6bc8198f47b78dce8b58fb022, type: 3}
+      propertyPath: scene
+      value: GameOver
+      objectReference: {fileID: 0}
     - target: {fileID: 6592485150734920842, guid: b6e417a6bc8198f47b78dce8b58fb022, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.6934345

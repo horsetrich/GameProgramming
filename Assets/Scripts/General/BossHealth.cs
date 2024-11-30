@@ -17,6 +17,9 @@ public class BossHealth : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
+    [SerializeField]
+    private GameObject finGame;
+
     [SerializeField] Slider healthBar;
 
     private void Awake()
@@ -42,6 +45,12 @@ public class BossHealth : MonoBehaviour
     public void CanKill() => canKill = true;
 
     public void CanNotKill() => canKill = false;
+
+    public void finGameScreen()
+    {
+        finGame.SetActive(true);
+    }
+
     public void GetHurt(int value)
     {
         enemyHealth = Mathf.Clamp(enemyHealth - value, 0, maxEnemyHealth);
@@ -60,6 +69,7 @@ public class BossHealth : MonoBehaviour
         }
         if (secondPhase && enemyHealth <= 0)
         {
+            finGameScreen();
             isDead = true;
             gameObject.GetComponent<BossSpirit>().BossIsDead();
         }

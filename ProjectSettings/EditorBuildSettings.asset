@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rest Areas/Village-cave.unity
     guid: 102b3e0833e2e654dac95596bc097bdf
+  - enabled: 1
+    path: Assets/Scenes/Menus/FinishedGame.unity
+    guid: 712dd09cabe8d4b4d807e74e82ce16fd
   m_configObjects: {}
