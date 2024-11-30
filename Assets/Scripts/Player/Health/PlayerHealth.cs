@@ -44,16 +44,11 @@ public class PlayerHealth : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-
-        
-
-
     {
        player = GetComponent<Player>();
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
         Physics2D.IgnoreLayerCollision(7, 8, false);
         health =  playerData.maxHealth;
-
 
         {
             rb = GetComponent<Rigidbody2D>();
@@ -79,8 +74,11 @@ public class PlayerHealth : MonoBehaviour
             Die();
 
         }
+    }
 
-
+    private void gameOverScreen()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 
 
@@ -89,7 +87,8 @@ public class PlayerHealth : MonoBehaviour
         //deathSoundEffect.Play();
         rb.bodyType = RigidbodyType2D.Static;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        RestartLevel();
+        // RestartLevel();
+        gameOverScreen();
 
         //anim.SetTrigger("death");
 
