@@ -396,12 +396,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6797130501198281357, guid: b6e417a6bc8198f47b78dce8b58fb022, type: 3}
       propertyPath: soundList.Array.data[0].sounds.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6797130501198281357, guid: b6e417a6bc8198f47b78dce8b58fb022, type: 3}
       propertyPath: soundList.Array.data[0].sounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: e635ebba5451ebd42a5f8f344b09c511, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7078133327792695180, guid: b6e417a6bc8198f47b78dce8b58fb022, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -1799,7 +1799,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3f4666fc7ccdd2e418a507ef3545e81f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.216
   m_Pitch: 1
   Loop: 1
   Mute: 0
