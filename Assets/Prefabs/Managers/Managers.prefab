@@ -266,17 +266,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundList:
   - name: SWORD
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: e635ebba5451ebd42a5f8f344b09c511, type: 3}
   - name: LAND
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 8a3cd70290c094142ae5722a678574a6, type: 3}
   - name: FOOTSTEP
     sounds: []
   - name: HURT
     sounds: []
   - name: JUMP
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 8dbba3ee89caa9b4191703217950101a, type: 3}
   - name: MAGIC
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 64b46779c93735349ac3d4654e7c5382, type: 3}
 --- !u!1 &6143155537069081391
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 
+  sceneToLoad: 
 --- !u!1 &6794892024057139256
 GameObject:
   m_ObjectHideFlags: 0
