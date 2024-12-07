@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8754431862268330198}
   - component: {fileID: 8943814550002873883}
   - component: {fileID: 8046995772470994968}
+  - component: {fileID: -3642722263044475276}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -307,6 +308,30 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8df9afbd-97a8-4b36-9dc9-7180b729394d
     m_ActionName: Gameplay/DashDirection[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d117468a-3ad5-4253-949b-17a171e751c5
+    m_ActionName: Gameplay/Interact[/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bfdff56a-1768-4042-bd20-cc90ccd39c13
+    m_ActionName: Gameplay/Submit[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8429333968113429887}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: UsePotionInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 034c2aa5-4c46-43ce-ab15-5fc10f8c1cb0
+    m_ActionName: Gameplay/Potion[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -435,6 +460,18 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &-3642722263044475276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628563362051904486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82af6d49c95ade42be1afbed78bba85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3541604980626466902
 GameObject:
   m_ObjectHideFlags: 0
