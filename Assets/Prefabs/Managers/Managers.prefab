@@ -272,15 +272,20 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: 8a3cd70290c094142ae5722a678574a6, type: 3}
   - name: FOOTSTEP
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: f9170fb3061dcea4ba82ea52e09f63ed, type: 3}
   - name: HURT
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 845ed746798fb514f978bef57497d7c4, type: 3}
   - name: JUMP
     sounds:
     - {fileID: 8300000, guid: 8dbba3ee89caa9b4191703217950101a, type: 3}
   - name: MAGIC
     sounds:
     - {fileID: 8300000, guid: 64b46779c93735349ac3d4654e7c5382, type: 3}
+  - name: BLOCK
+    sounds:
+    - {fileID: 8300000, guid: cf57ce0985274b442b8f786bda0dfd07, type: 3}
 --- !u!1 &6143155537069081391
 GameObject:
   m_ObjectHideFlags: 0
