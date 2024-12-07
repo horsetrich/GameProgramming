@@ -12,7 +12,8 @@ public enum SoundType
     FOOTSTEP,
     HURT,
     JUMP,
-    MAGIC
+    MAGIC,
+    BLOCK
 }
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 public class SoundManager : MonoBehaviour
