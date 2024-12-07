@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Menus/Main Menu.unity
+    guid: 5278ddf67fabc2b43bfe1a233cfe8a35
   - enabled: 1
     path: Assets/Scenes/Rest Areas/Village-grassy.unity
     guid: 740a81d3490a60c4cac84950132f4edb
@@ -23,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/CaveLevel.unity
     guid: a5a4f18da35e332449ba1346a956d8d1
-  - enabled: 1
-    path: Assets/Scenes/Menus/Main Menu.unity
-    guid: 5278ddf67fabc2b43bfe1a233cfe8a35
   - enabled: 1
     path: Assets/Scenes/Menus/GameOver.unity
     guid: 5841914baa63db845982af11e9331de6
