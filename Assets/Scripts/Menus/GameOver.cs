@@ -30,6 +30,7 @@ public class GameOver : MonoBehaviour
 
     public void Restart()
     {
+        DataPersistenceManager.Instance.NewGame();
         SceneManager.LoadScene("GrassyLevel");
     }
 }
